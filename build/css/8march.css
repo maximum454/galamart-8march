@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*
 * @include triangle within a pseudo element and add positioning properties (ie. top, left)
 * $direction: up, down, left, right
@@ -85,33 +83,58 @@ html {
 }
 
 .remodal-overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 184, 0, 0.4)), to(rgba(103, 184, 0, 0.296)));
+  background: -o-linear-gradient(top, rgba(255, 184, 0, 0.4) 0%, rgba(103, 184, 0, 0.296) 100%);
+  background: linear-gradient(180deg, rgba(255, 184, 0, 0.4) 0%, rgba(103, 184, 0, 0.296) 100%);
+  -webkit-backdrop-filter: blur(11.5px);
+          backdrop-filter: blur(11.5px);
 }
 
 .remodal {
   text-align: left;
   position: relative;
-  background: #FFFFFF;
+  background: -webkit-gradient(linear, left top, right top, from(#6DB84A), to(#C3DC2B));
+  background: -o-linear-gradient(left, #6DB84A 0%, #C3DC2B 100%);
+  background: linear-gradient(90deg, #6DB84A 0%, #C3DC2B 100%);
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  max-width: 874px;
+  padding: 89px 79px 82px;
+  font-family: "Montserrat";
+}
+
+.remodal:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../img/bg.png");
   border-radius: 30px;
-  font-family: "PT Sans";
-  max-width: 660px;
-  padding: 50px 28px 50px 38px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  z-index: -1;
 }
 
 .remodal p {
-  font-style: normal;
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  margin: 0 0 24px;
-  color: #63D0FF;
+  color: #C24040;
+  margin: 0 0 20px;
+}
+
+.remodal p:last-of-type {
+  margin-bottom: 0;
 }
 
 .remodal a {
   text-decoration: underline;
-  color: #1880C1;
+  color: #C24040;
 }
 
 .remodal span {
@@ -119,43 +142,9 @@ html {
   font-style: italic;
 }
 
-.remodal ul {
-  margin: 0 0 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.remodal ul li {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 31px;
-  color: #222222;
-  padding-left: 17px;
-  margin: 0 0 5px;
-  position: relative;
-}
-
-.remodal ul li:before {
-  content: "•";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.remodal__title {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 31px;
-  text-align: center;
-  color: #222222;
-  margin-bottom: 5px;
-}
-
 .remodal .remodal-close {
-  top: 30px;
-  right: 30px;
+  top: 40px;
+  right: 40px;
   left: auto;
   width: 50px;
   height: 50px;
@@ -295,36 +284,26 @@ html {
   }
 
   .remodal {
-    padding: 39px 13px 40px 18px;
-    border-radius: 20px;
+    padding: 85px 23px 60px;
+    border-radius: 10px;
   }
 
-  .remodal ul {
+  .remodal:before {
+    border-radius: 10px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    z-index: -1;
+  }
+
+  .remodal p {
+    font-size: 14px;
+    line-height: 17px;
     margin: 0 0 20px;
   }
 
-  .remodal ul li {
-    font-size: 16px;
-    line-height: 21px;
-    padding-left: 17px;
-  }
-
-  .remodal ul li:before {
-    content: "•";
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .remodal__title {
-    font-size: 18px;
-    line-height: 27px;
-    margin-bottom: 20px;
-  }
-
   .remodal .remodal-close {
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
   }
 
   .march8-catalog__body {

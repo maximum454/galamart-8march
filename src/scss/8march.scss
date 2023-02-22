@@ -67,66 +67,52 @@ body{
 }
 
 .remodal-overlay{
-	background-color: rgba(0,0,0,.3);
+	background: linear-gradient(180deg, rgba(255, 184, 0, 0.4) 0%, rgba(103, 184, 0, 0.296) 100%);
+	backdrop-filter: blur(11.5px);
 }
 .remodal{
 	text-align: left;
 	position: relative;
-	background: #FFFFFF;
+	background: linear-gradient(90deg, #6DB84A 0%, #C3DC2B 100%);
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-	border-radius: 30px;
-	font-family: "PT Sans";
-	max-width: 660px;
-	padding: 50px 28px 50px 38px;
+	border-radius: 50px;
+	max-width: 874px;
+	padding: 89px 79px 82px;
+	font-family: 'Montserrat';
+	&:before{
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background-image: url("../img/bg.png");
+		border-radius: 30px;
+		width: calc( 100% - 40px);
+		height: calc( 100% - 40px);
+		z-index: -1;
+	}
 	p{
-		font-style: normal;
+		font-family: 'Montserrat';
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 24px;
-		margin: 0 0 24px;
-		color: #63D0FF;
+		color: #C24040;
+		margin: 0 0 20px;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
 	}
 	a{
 		text-decoration: underline;
-		color: #1880C1;
+		color: #C24040;
 	}
 	span{
 		color: #1880C1;
 		font-style: italic;
 	}
-	ul{
-		margin: 0 0 20px;
-		padding: 0;
-		list-style: none;
-		li{
-			font-weight: 400;
-			font-size: 18px;
-			line-height: 31px;
-			color: #222222;
-			padding-left: 17px;
-			margin: 0 0 5px;
-			position: relative;
-			&:before{
-				content: '•';
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-		}
-	}
-	&__title{
-		font-family: 'PT Sans';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 31px;
-		text-align: center;
-		color: #222222;
-		margin-bottom: 5px;
-	}
 	.remodal-close{
-		top: 30px;
-		right: 30px;
+		top: 40px;
+		right: 40px;
 		left: auto;
 		width: 50px;
 		height: 50px;
@@ -190,38 +176,26 @@ body{
 }
 
 @include r(767){
-	.wrp{
-
-	}
 	.remodal-wrapper{
 		padding: 20px 0 0;
 	}
 	.remodal{
-		padding: 39px 13px 40px 18px;
-		border-radius: 20px;
-		ul{
-			margin: 0 0 20px;
-			li{
-
-				font-size: 16px;
-				line-height: 21px;
-				padding-left: 17px;
-				&:before{
-					content: '•';
-					position: absolute;
-					top: 0;
-					left: 0;
-				}
-			}
+		padding: 85px 23px 60px;
+		border-radius: 10px;
+		&:before{
+			border-radius: 10px;
+			width: calc( 100% - 10px);
+			height: calc( 100% - 10px);
+			z-index: -1;
 		}
-		&__title{
-			font-size: 18px;
-			line-height: 27px;
-			margin-bottom: 20px;
+		p{
+			font-size: 14px;
+			line-height: 17px;
+			margin: 0 0 20px;
 		}
 		.remodal-close{
-			top: 20px;
-			right: 20px;
+			top: 12px;
+			right: 12px;
 		}
 	}
 }
