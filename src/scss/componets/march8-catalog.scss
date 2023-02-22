@@ -1,0 +1,57 @@
+.march8-catalog {
+  margin-bottom: 80px;
+  &__body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+    max-width: 1150px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  &__item{
+    flex: 1 0 calc(25% - 20px);
+    max-width: 25%;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat';
+  }
+  &__figure{
+    background: url('../img/bg2.png');
+    box-shadow: inset 4px 4px 10px rgba(120, 65, 48, 0.5);
+    margin: 0;
+    border-radius: 50%;
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 100%;
+    }
+  }
+  &__name{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    background: linear-gradient(94.65deg, #FF8357 5.01%, #D56C74 98.85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  @include r(1023){
+    &__item{
+      flex: 1 0 calc(33.33% - 20px);
+      max-width: 33%;
+    }
+  }
+  @include r(767){
+    &__body{
+      gap: 26px 18px;
+    }
+    &__item{
+      flex: 1 0 calc(50% - 20px);
+      max-width: 50%;
+    }
+  }
+}
