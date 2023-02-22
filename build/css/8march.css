@@ -93,14 +93,12 @@ html {
 .remodal {
   text-align: left;
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(#6DB84A), to(#C3DC2B));
-  background: -o-linear-gradient(left, #6DB84A 0%, #C3DC2B 100%);
-  background: linear-gradient(90deg, #6DB84A 0%, #C3DC2B 100%);
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
   border-radius: 50px;
+  padding: 20px;
   max-width: 874px;
-  padding: 89px 79px 82px;
   font-family: "Montserrat";
 }
 
@@ -112,11 +110,33 @@ html {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../img/bg.png");
+  background: -webkit-gradient(linear, left top, right top, from(#6DB84A), to(#C3DC2B));
+  background: -o-linear-gradient(left, #6DB84A 0%, #C3DC2B 100%);
+  background: linear-gradient(90deg, #6DB84A 0%, #C3DC2B 100%);
   border-radius: 30px;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
+  width: 100%;
+  height: 100%;
   z-index: -1;
+}
+
+.remodal:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/remodal-decor.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  width: 307px;
+  height: 302px;
+  z-index: -2;
+}
+
+.remodal__body {
+  background-image: url("../img/bg.png");
+  padding: 89px 79px 82px;
+  border-radius: 30px;
 }
 
 .remodal p {
