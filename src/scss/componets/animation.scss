@@ -192,6 +192,37 @@
     width: 180px;
     height: 267px;
   }
+  @include r(767){
+    width: 126px;
+    height: 180px;
+    margin-left: -18px;
+    .IWD-flower-11{
+      width: 50px;
+    }
+    .IWD-flower-10{
+      top: 75px;
+      right: -10px;
+      width: 50px;
+    }
+    .IWD-flower-8{
+      top: -20px;
+      width: 110px;
+    }
+    .IWD-flower-3{
+      width: 85px;
+      bottom: 17px;
+    }
+    .IWD-flower-4{
+      left: 88px;
+    }
+    .IWD-flower-5{
+      left: 42px;
+      width: 80px;
+    }
+    .IWD-flower-9{
+      width: 80px;
+    }
+  }
 }
 
 

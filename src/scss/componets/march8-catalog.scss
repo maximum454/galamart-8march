@@ -54,4 +54,11 @@
       max-width: 50%;
     }
   }
+  @include r(400){
+    &__figure{
+      img{
+        max-width: 80%;
+      }
+    }
+  }
 }

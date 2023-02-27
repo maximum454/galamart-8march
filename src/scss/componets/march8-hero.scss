@@ -17,14 +17,15 @@
   &:before{
     content: '';
     position: absolute;
-    top: 0;
+    top: -60px;
     left: 50%;
     transform: translate(-50%,0);
     background-image: url("../img/hero-decor2.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 117px;
-    height: 56px;
+    height: 117px;
+    pointer-events: none;
   }
   &__body{
     max-width: 1150px;
@@ -172,6 +173,82 @@
       a{
         color: #C24040;
         text-decoration: underline;
+      }
+    }
+  }
+  @include r(767){
+    margin-bottom: 50px;
+    &:after{
+      background-image: url("../img/hero-decor-mobile.png");
+      width: 163px;
+      height: 133px;
+    }
+    &:before{
+      top: 229px;
+      left: 7px;
+      transform: translate(0,0);
+      width: 180px;
+      height: 150px;
+      z-index: 10;
+    }
+    &__title{
+      max-width: 349px;
+      left: 8px;
+      top: 0;
+      margin-top: -120px;
+      flex-shrink: 0;
+      span{
+        top: 50px;
+        font-size: 16px;
+        right: 0;
+      }
+    }
+    &__btn{
+      flex: 1 0 100%;
+      left: auto;
+      max-width: 150px;
+      height: 31px;
+      font-size: 12px;
+      margin-left: auto;
+      margin-right: -14px;
+      margin-top: -30px;
+    }
+    &__line{
+      width: 170%;
+      margin: 55px auto 0;
+    }
+    &__text{
+      margin-top: 16px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      p{
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+  @include r(400){
+    margin-bottom: 40px;
+    &:after{
+      width: 110px;
+      height: 90px;
+    }
+    &:before{
+      top: 212px;
+      left: -7px;
+      width: 150px;
+      height: 150px;
+      z-index: 10;
+    }
+    &__title{
+      max-width: 249px;
+      left: 24px;
+      margin-top: -105px;
+      span{
+        top: 30px;
+        font-size: 12px;
+        right: -5px;
       }
     }
   }
