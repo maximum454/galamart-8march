@@ -14,6 +14,14 @@
     text-align: center;
     text-decoration: none;
     font-family: 'Montserrat';
+    &:hover{
+      .march8-catalog__figure{
+        img{
+          transform: translate(-50%,-50%) scale(1.1);
+          transition: all .3s ease;
+        }
+      }
+    }
   }
   &__figure{
     background: url('../img/bg2.png');
@@ -26,6 +34,7 @@
       top: 50%;
       transform: translate(-50%,-50%);
       max-width: 100%;
+      transition: all .3s ease;
     }
   }
   &__name{

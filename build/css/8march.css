@@ -1099,6 +1099,15 @@ html {
   font-family: "Montserrat";
 }
 
+.march8-catalog__item:hover .march8-catalog__figure img {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+      -ms-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .march8-catalog__figure {
   background: url("../img/bg2.png");
   -webkit-box-shadow: inset 4px 4px 10px rgba(120, 65, 48, 0.5);
@@ -1115,6 +1124,9 @@ html {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .march8-catalog__name {
