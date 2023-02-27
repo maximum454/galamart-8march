@@ -122,8 +122,8 @@ html {
 .remodal:after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -100px;
+  left: -100px;
   background-image: url("../img/remodal-decor.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -140,7 +140,7 @@ html {
 }
 
 .remodal p {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -153,6 +153,7 @@ html {
 }
 
 .remodal a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: underline;
   color: #C24040;
 }
@@ -236,8 +237,26 @@ html {
   top: 0;
   right: 0;
   background-image: url("../img/hero-decor.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
   width: 413px;
   height: 291px;
+  pointer-events: none;
+}
+
+.march8-hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-image: url("../img/hero-decor2.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 117px;
+  height: 56px;
 }
 
 .march8-hero__body {
@@ -253,6 +272,8 @@ html {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .march8-hero__title {
@@ -283,13 +304,16 @@ html {
 }
 
 .march8-hero__btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   top: 36px;
   left: -170px;
   background: -o-linear-gradient(177.82deg, #C3DC2B 30.16%, #6DB84A 98.16%), #E24E74;
   background: linear-gradient(272.18deg, #C3DC2B 30.16%, #6DB84A 98.16%), #E24E74;
   border-radius: 60px 0px 80px;
-  width: 248px;
+  max-width: 248px;
+  width: 100%;
   height: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,7 +418,13 @@ html {
   width: 206px;
   height: 297px;
   z-index: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   /*flowers*/
+}
+
+.IWD-ei img {
+  max-width: 100%;
 }
 
 .IWD-ei__mask {
@@ -406,6 +436,7 @@ html {
   background-image: url("../img/bg8.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 100% 100%;
   z-index: 60;
 }
 
@@ -1099,6 +1130,62 @@ html {
 }
 
 @media only screen and (max-width: 1023px) {
+  .march8-hero {
+    margin-bottom: 80px;
+  }
+
+  .march8-hero:after {
+    width: 230px;
+    height: 170px;
+  }
+
+  .march8-hero__title {
+    max-width: 460px;
+    left: -100px;
+    top: 60px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
+  .march8-hero__title span {
+    top: 67px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .march8-hero__btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    left: auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .march8-hero__text {
+    margin-top: -5px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: 32px;
+  }
+
+  .march8-hero__text p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .march8-hero__text a {
+    color: #C24040;
+    text-decoration: underline;
+  }
+
+  .IWD-ei {
+    width: 180px;
+    height: 267px;
+  }
+
   .march8-catalog__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 calc(33.33% - 20px);
